@@ -1,0 +1,25 @@
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./Layout";
+
+import {
+  Home,
+  Destinations,
+  Tours,
+  About,
+  Contact,
+} from "./Pages";
+
+export default function App() {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/destinations" element={<Destinations />} />
+        <Route path="/tours" element={<Tours />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
+  );
+}
